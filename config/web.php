@@ -10,7 +10,7 @@ $config = [
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
         'request' => [
@@ -19,6 +19,21 @@ $config = [
         ],
         'assetManager' => [
             'appendTimestamp' => true,
+            'converter' => [
+                'class' => 'nizsheanez\assetConverter\Converter',
+                'parsers' => [
+                    'scss' => [
+                        'class' => 'nizsheanez\assetConverter\Scss',
+                        'output' => 'css', // parsed output file type
+                        'options' => [
+                            'enableCompass' => true, // default is true
+                            'importPaths' => [], // import paths, you may use path alias here,
+                            'lineComments' => false, // if true — compiler will place line numbers in your compiled output
+                            'outputStyle' => 'nested', // May be `compressed`, `crunched`, `expanded` or `nested`,
+                        ],
+                    ],
+                ]
+            ]
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -44,6 +59,22 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                [
+                    'pattern' => '/task/index',
+                    'route' => 'task/index',
+                ],
+                [
+                    'pattern' => '/task/delete',
+                    'route' => 'task/delete',
+                ],
+                [
+                    'pattern' => '/task/create',
+                    'route' => 'task/create',
+                ],
+                [
+                    'pattern' => '/task/<id>',
+                    'route' => 'task/update',
+                ],
             ],
         ],
     ],

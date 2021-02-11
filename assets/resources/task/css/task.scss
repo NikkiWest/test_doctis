@@ -1,0 +1,47 @@
+.new-card-color {
+    background-color: #e9ca77;
+}
+
+.in_work-card-color {
+    background-color: #7ac2e3;
+}
+
+.completed-card-color {
+    background-color: #47cb67;
+}
+
+.task-row {
+    margin: 20px -15px;
+}
+
+.box-task {
+    padding: 20px;
+}
+
+.header__box-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.title__box-task {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.established__box-task {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.actions__box-task a {
+    color: #333333;
+}
+
+.delete-task {
+    cursor: pointer;
+}
+.task-form{
+    margin-top: 30px;
+}

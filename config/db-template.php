@@ -7,6 +7,6 @@ return [
     'password' => 'place-holder',
     'charset' => 'utf8',
     'on afterOpen' => function($event) {
-        $event->sender->createCommand("SET TIMEZONE='Asia/Novosibirsk'")->execute();
+        $event->sender->createCommand("SET GLOBAL time_zone='Asia/Novosibirsk'")->execute();
     },
 ];
