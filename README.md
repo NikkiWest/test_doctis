@@ -5,6 +5,6 @@
 <br>
 <p align="center">
     <h3 align="center">Редактирование/добавление</h3>
-        <img src="https://ibb.co/3h8fCgD">
+        <img src="http://joxi.ru/GrqndjVcR4oE8m">
     <br>
 </p>
